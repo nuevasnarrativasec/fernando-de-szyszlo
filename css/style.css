@@ -295,11 +295,15 @@ body, html {
                 .rotate-3 h5{
                     transform: rotate(-90deg) translate(-170px, -190px);
                 }
-.box-obras{
+.box-obras,
+.medio-obras{
     background: url("../img/bg-obras.webp") no-repeat center top;
     background-color: #191d21;
-    background-size: cover;
+    background-size: 100%;
     padding-bottom: 180px;
+}
+.medio-obras{
+    padding-bottom: 0;
 }
     .corte-4{
         background: url("../img/corte-4.png?v3") no-repeat center top;
@@ -319,6 +323,9 @@ body, html {
         padding: 20px 0;
         position: relative;
         z-index: 50;
+    }
+    .medio-obras .ctn-box-obras{
+        margin-top: 0;
     }
         .ctn-box-obras h4{
             color: #fff;
@@ -357,7 +364,8 @@ body, html {
     .box-parallax-obras{
         position: relative;
     }
-        #section-obras {
+        #section-obras,
+        #section-obras-2 {
             overflow: hidden;
             position: relative;                
         }
@@ -407,6 +415,33 @@ body, html {
                 z-index: 40;
             }
             #block-5 {
+                position: absolute;
+                z-index: 50;
+            }
+
+            #block-7 {
+                background-color: #ebebe9;
+                background-image: url('../img/bg-cuadro-2.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 1; 
+                position: absolute;               
+                z-index: 10;
+            }
+            #block-8 {
+                position: absolute;
+                z-index: 20;
+            }
+            #block-9 {
+                position: absolute;
+                z-index: 30;
+            }
+            #block-10 {
+                position: absolute;
+                z-index: 40;
+            }
+            #block-11 {
                 position: absolute;
                 z-index: 50;
             }
