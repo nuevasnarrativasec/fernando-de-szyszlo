@@ -153,7 +153,8 @@ body, html {
                     font-weight: 400;
                 }
         .ctn-box-intro p,
-        .ctn-box-legado p{
+        .ctn-box-legado p,
+        .ctn-box-texto-homenaje p{
             color: #fff;
             font-family: "Noto Sans KR", sans-serif;
             font-weight: 400;
@@ -161,7 +162,8 @@ body, html {
             margin: 20px 0;
         }
             .ctn-box-intro p span.first,
-            .ctn-box-legado p span.first{
+            .ctn-box-legado p span.first,
+            .ctn-box-texto-homenaje p span.first{
                 float: left;
                 font: 8rem / 0.8 'kesaneregular';
                 height: 85px;
@@ -293,6 +295,67 @@ body, html {
                 .rotate-3 h5{
                     transform: rotate(-90deg) translate(-170px, -190px);
                 }
+.box-obras{
+    background: url("../img/bg-obras.webp") no-repeat center top;
+    background-color: #191d21;
+    background-size: cover;
+    padding-bottom: 180px;
+}
+    .corte-4{
+        background: url("../img/corte-4.png?v3") no-repeat center top;
+        background-size: cover;
+        display: block;
+        height: 130px;
+        margin: 0 auto;
+        position: relative;
+        transform: translate(0,-129px);        
+        width: 100%;
+        z-index: 30;
+    }
+    .ctn-box-obras{
+        margin: 0 auto;
+        margin-top: -180px;
+        max-width: 750px;
+        padding: 20px 0;
+        position: relative;
+        z-index: 50;
+    }
+        .ctn-box-obras h4{
+            color: #fff;
+            font: 14rem/0.9 'kesaneregular';
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        .ctn-box-obras p{
+            color: #fff;
+            font-family: "Noto Sans KR", sans-serif;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+        }
+            .ctn-box-obras p span{
+                font-weight: 700;
+            }
+        .box-titulo-obra{
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            margin: 60px auto;
+            padding: 20px 40px;
+            text-align: center;
+            width: fit-content;
+        }
+            .box-titulo-obra h5{
+                color: #fff;
+                font: 6rem/0.9 'kesaneregular';
+                margin: 0 auto;
+            }
+            .box-titulo-obra p{
+                font: 1rem/1.7 "Noto Sans KR", sans-serif;
+                font-weight: 700;
+            }
+
+
 .box-homenajes{
     background: url("../img/bg-homenajes.webp") no-repeat center top;
     background-color: #000735;
@@ -351,7 +414,23 @@ body, html {
                     font-weight: 500;
                     margin: 10px auto 0;                
                 }
-
+.box-texto-homenaje{
+    background-color: #af6400;
+}
+    .corte-3{
+        background: url("../img/corte-3.png?v3") no-repeat center top;
+        background-size: cover;
+        display: block;
+        height: 130px;
+        margin: 0 auto;
+        transform: translate(0,-129px);        
+        width: 100%;
+    }
+    .ctn-box-texto-homenaje {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px 0;
+    }
 
 
 
