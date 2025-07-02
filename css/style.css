@@ -154,7 +154,8 @@ body, html {
                 }
         .ctn-box-intro p,
         .ctn-box-legado p,
-        .ctn-box-texto-homenaje p{
+        .ctn-box-texto-homenaje p,
+        .ctn-box-hablan-texto p{
             color: #fff;
             font-family: "Noto Sans KR", sans-serif;
             font-weight: 400;
@@ -163,7 +164,8 @@ body, html {
         }
             .ctn-box-intro p span.first,
             .ctn-box-legado p span.first,
-            .ctn-box-texto-homenaje p span.first{
+            .ctn-box-texto-homenaje p span.first,
+            .ctn-box-hablan-texto p span.first{
                 float: left;
                 font: 8rem / 0.8 'kesaneregular';
                 height: 85px;
@@ -472,8 +474,6 @@ body, html {
             .box-iframe{
                 width: 100%;
             }
-
-
 .box-homenajes{
     background: url("../img/bg-homenajes.webp") no-repeat center top;
     background-color: #25272c;
@@ -534,6 +534,7 @@ body, html {
                 }
 .box-texto-homenaje{
     background-color: #af6400;
+    padding-bottom: 140px;
 }
     .corte-3{
         background: url("../img/corte-3.png?v3") no-repeat center top;
@@ -549,7 +550,100 @@ body, html {
         max-width: 600px;
         padding: 20px 0;
     }
-
+.box-hablan{
+    background-color: #f8bb80;    
+    height: 100vh;    
+    position: relative;
+}
+    .corte-5{
+        background: url("../img/corte-5.png?v3") no-repeat center top;
+        background-size: cover;
+        display: block;
+        height: 130px;
+        margin: 0 auto;
+        transform: translate(0,-129px);
+        width: 100%;
+    }
+    .ctn-box-hablan{
+        background-color: #f8bb80;
+        margin: 0 auto;        
+        overflow: hidden;
+        padding: 20px 0;
+        position: relative; 
+    }
+        img.bg-fixed-rojo{
+            bottom: 0;
+            left: -5%;      
+            max-width: 40%;        
+            position: absolute;         
+            z-index: 30;        
+        }
+        .ctn-box-hablan-texto{
+            max-width: 650px;
+            position: relative;
+            transform: translate(120%, 0);
+            z-index: 50;
+        }
+            .ctn-box-hablan-texto h5{
+                color: #000;
+                font: 9rem / 0.8 'kesaneregular';
+                margin: 0 auto 20px;
+            }
+            .ctn-box-hablan-texto h6{
+                color: #fff;
+                font: 3.5rem / 0.8 'kesaneregular';
+                margin: 0 auto;
+            }
+            .ctn-box-hablan-texto .box-autor h5{
+                color: #000;
+                display: inline-block;
+                font-family: "Noto Sans KR", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.4;
+                margin: 20px auto 0;
+                vertical-align: top;
+            }
+            .ctn-box-hablan-texto p{
+                color: #000;
+            }
+                .ctn-box-hablan-texto .margin-bottom{
+                    margin-bottom: 90px;
+                }
+            .box-frase{
+                margin: 40px auto 80px;
+                text-align: center;
+            }
+                .box-frase h4{
+                    font: 3.4rem/0.9 'kesaneregular';
+                    margin: 0 auto;
+                }
+                .box-autor-frase{
+                    margin: 0 auto;
+                    max-width: 350px;
+                    position: relative;
+                }
+                    .box-frase h6{
+                        background-color: #f8bb80;
+                        color: #000;
+                        font-family: "Noto Sans KR", sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        margin: 20px auto;
+                        padding: 0 10px;
+                        position: relative;
+                        width: fit-content;                        
+                        z-index: 10;    
+                    }
+                    .box-autor-frase span{
+                        background-color: #000;
+                        height: 2px;
+                        left: 0;                        
+                        position: absolute;                        
+                        top: 50%;
+                        width: 100%;
+                    }
+    
 
 
 @media (max-width: 640px) {
