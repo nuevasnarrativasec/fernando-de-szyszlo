@@ -1,0 +1,300 @@
+.clear{
+    clear: both;
+}
+
+body, html {    
+    margin: 0;    
+    padding: 0;    
+    font-style: normal;
+    font-display: swap;
+    font-weight: normal;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'kesaneregular';
+    src: url('../fonts/kesane-regular-webfont.woff2') format('woff2'),
+         url('../fonts/kesane-regular-webfont.woff') format('woff');
+}
+
+
+#header{
+    margin-bottom: 50px;
+    width: 100%;
+}
+    .header-comercio{   
+        background: #000;    
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 9999999;
+    }
+        .ctn-header-comercio{
+            margin: 0 auto;     
+            max-width: 1024px;
+            padding: 0 5px;
+            text-align: right;
+        }
+            .ctn-header-comercio a{
+                display: inline-block;                
+                text-indent: -9999px;
+            }
+                a.logo-comercio{
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/somos-35-anos-mejores-portadas-ecpm/img/logo-comercio.png?v2) no-repeat 0 0;
+                    background-size: 100%;
+                    display: none;
+                    height: 30px;
+                    margin-top: 10px;
+                    width: 110px;
+                }
+                #social{
+                        float: right;
+                        margin: 20px;
+                        position: absolute;
+                        right: 0;
+                        z-index: 600;
+                }
+                #social ul{
+                    display: inline-block;
+                    margin: 0 auto;
+                    padding: 0;
+                    vertical-align: middle;
+                }
+                    #social ul li{
+                        display: inline-block;
+                        margin: 0 3px;
+                        vertical-align: middle;
+                    }
+                        #social ul li a{
+                            height: 36px;
+                            width: 36px;
+                        }
+                        #fb{
+                            background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/fb-icon.png?v2) no-repeat 0 0;
+                            background-size: 100% !important;
+                            border: none;
+                            display: inline-block;
+                            height: 36px;
+                            text-indent: -9999px;
+                            width: 36px;
+                        }
+                        #wst{                
+                            background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/wsp-icon.png?v2) no-repeat 0 0 !important;
+                            background-size: 100% !important;
+                            border: none;
+                            display: none;
+                            height: 36px;
+                            text-indent: -9999px;
+                            width: 36px;
+                        }
+                        #tw{            
+                            background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/tw-icon.png?v2) no-repeat 0 0 !important;
+                            background-size: 100% !important;
+                            border: none;
+                            display: inline-block;
+                            height: 36px;
+                            text-indent: -9999px;
+                            width: 36px;
+                        } 
+.box-portada{
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+    .box-portada video{
+        height: 100%;
+        left: 0;        
+        object-fit: cover;
+        object-position: bottom;
+        position: absolute;
+        top: 0;        
+        width: 100%;
+    }
+.box-intro{
+    background-color: #640c06;
+    position: relative;
+}
+    .box-intro .corte-1{
+        display: block;
+        margin: 0 auto;
+        transform: translate(0,-129px);        
+        width: 100%;
+    }
+    .ctn-box-intro {
+        margin: 0 auto;
+        margin-top: -150px;
+        max-width: 600px;
+        padding: 20px 0;
+    }
+        .box-autor{
+            
+        }
+            .box-autor img{
+                display: inline-block;
+                margin: 10px;
+                max-width: 70px;
+            }
+            .box-autor h5{
+                color: #fff;
+                display: inline-block;
+                font-family: "Noto Sans KR", sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 20px auto 0;
+                vertical-align: top;
+            }
+                .box-autor h5 span{
+                    display: block;
+                    font-weight: 400;
+                }
+        .ctn-box-intro p,
+        .ctn-box-legado p{
+            color: #fff;
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+            .ctn-box-intro p span.first,
+            .ctn-box-legado p span.first{
+                float: left;
+                font: 8rem / 0.8 'kesaneregular';
+                height: 85px;
+                padding-right: 10px;
+                vertical-align: top;      
+            }
+        h4.frase{
+            color: #fff;
+            font: 5rem/0.9'kesaneregular';
+            margin: 35px auto;
+            text-align: center;
+        }
+        h3.subtitulo{
+            color: #fff;
+            font: 8rem/0.8 'kesaneregular';
+            margin: 35px auto;
+            text-align: center;
+        }
+.box-legado{
+    background-color: #4a0603;
+    padding-bottom: 50px;
+    position: relative;
+}
+    .ctn-box-legado {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px 0;
+    }
+    .ctn-box-legado p:nth-child(2){
+        margin-top: 50px;
+    }
+.box-hitos{
+    background: url("../img/bg-hitos.jpg?v3") no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+    img.bg-fixed{
+        bottom: 0;
+        max-width: 40%;        
+        position: absolute;
+        right: 0;        
+        z-index: 30;        
+    }
+    .ctn-hitos{
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px 0;
+        position: relative;
+        transform: translate(-60%, 0);
+        z-index: 50;
+    }
+        .ctn-hitos h4{
+            color: #fff;
+            font: 20rem/0.9 'kesaneregular';
+            margin: 0 auto;
+            text-align: center;
+        }
+        .ctn-hitos p{
+            color: #fff;
+            font-family: "Noto Sans KR", sans-serif;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 400;
+           
+            margin: 20px auto;
+        }
+            .ctn-hitos p span.first{
+                float: left;
+                font: 8rem / 0.8 'kesaneregular';
+                height: 85px;
+                padding-right: 10px;
+                vertical-align: top;      
+            }
+            .ctn-hitos p span{
+                font-weight: 700;
+            }
+            .ctn-hitos p:nth-child(2){
+                margin-bottom: 50px;
+            }
+        .box-fecha{
+            margin-bottom: 20px;
+        }
+            .box-fecha h5{
+                color: #CF2C22;
+                display: inline-block;
+                font: 6.5rem/0.9 'kesaneregular';
+                margin: 0;
+                transform: rotate(-90deg);
+                vertical-align: top;
+            }
+            .box-texto-fecha{
+                display: inline-block;
+                max-width: 350px;
+                vertical-align: top;
+            }
+            .box-texto-fecha p{
+                color: #fff;
+                font-family: "Noto Sans KR", sans-serif;
+                font-size: 1.1rem;
+                font-weight: 400;
+                line-height: 1.8;
+                margin: 20px 0;
+            }
+            .box-texto-fecha h6{
+                color: #fff;
+                font: 1.5rem/1.2 "Noto Sans KR", sans-serif;
+                font-weight: 700;
+                margin: 0 auto;
+            }
+            .box-texto-fecha p{
+                font-weight: 300;
+                line-height: 1.6;
+            }
+            .derecha{
+                margin-bottom: 100px;
+                transform: translate(100px, 50px);
+            }
+            .derecha-2{
+                transform: translate(200px, 0);
+            }
+                .rotate h5{
+                    transform: rotate(-90deg) translate(-170px, -170px);
+                }
+                .rotate-2 h5{
+                    transform: rotate(-90deg) translate(-170px, -190px);
+                }
+                .rotate-3 h5{
+                    transform: rotate(-90deg) translate(-170px, -190px);
+                }
+
+
+
+
+@media (max-width: 640px) {
+
+
+}
