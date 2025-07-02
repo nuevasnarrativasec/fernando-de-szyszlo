@@ -1,0 +1,115 @@
+const preguntas = [
+            { 
+                pregunta: "¿Qué crees que buscaba Szyszlo al pintar?", 
+                opciones: ["A. Representar la realidad de manera literal", "B. Expresar emociones personales sin contexto", "C. Conectar con lo ancestral desde un lenguaje moderno"], 
+                correcta: 2, 
+                imagen: "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/01.png", 
+                mensaje: ["¡Incorrecto! Szyszlo creía que el arte debía tener “memoria y misterio”, y que lo precolombino podía leerse con formas abstractas.", "¡Incorrecto! Szyszlo creía que el arte debía tener “memoria y misterio”, y que lo precolombino podía leerse con formas abstractas.", "¡Correcto! Szyszlo creía que el arte debía tener “memoria y misterio”, y que lo precolombino podía leerse con formas abstractas."] 
+            },
+            { 
+                pregunta: "¿Qué técnica predomina en su obra?", 
+                opciones: ["A. Collage y arte digital", "B. Pintura acrílica figurativa", "C. Óleo con textura, geometría y simbolismo"], 
+                correcta: 2, 
+                imagen: "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/02.png", 
+                mensaje: ["Incorrecto! Usaba óleo con capas densas y colores rituales para crear atmósferas que evocan espacios sagrados.", "¡Incorrecto! Usaba óleo con capas densas y colores rituales para crear atmósferas que evocan espacios sagrados.", "¡Correcto! Usaba óleo con capas densas y colores rituales para crear atmósferas que evocan espacios sagrados."] 
+            },
+            { 
+                pregunta: "¿Qué significa una obra como Paracas: La Noche?", 
+                opciones: ["A. Es una copia de textiles antiguos.", "B. Es un experimento geométrico sin contenido.", "C. Es una abstracción inspirada en los rituales y simbolismos Paracas."], 
+                correcta: 2, 
+                imagen: "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/03.png", 
+                mensaje: ["¡Incorrecto! simply dummy text of the printing and typesetting industry.", "¡Incorrecto! simply dummy text of the printing and typesetting industry.", "¡Correcto! simply dummy text of the printing and typesetting industry."] 
+            },
+            { 
+                pregunta: "¿Qué lugar puedes visitar hoy en Lima para ver su obra?", 
+                opciones: ["A. Solo en galerías privadas.", "B. En su casa particular.", "C. En el Museo de Arte de Lima (MALI) y el MAC Lima."], 
+                correcta: 2, 
+                imagen: "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/04.png", 
+                mensaje: ["¡Incorrecto! Ambos museos exhiben sus piezas: el MALI de forma permanente, y el MAC con una exposición por su centenario.", "¡Incorrecto! Ambos museos exhiben sus piezas: el MALI de forma permanente, y el MAC con una exposición por su centenario.","¡Correcto! Ambos museos exhiben sus piezas: el MALI de forma permanente, y el MAC con una exposición por su centenario."] 
+            },
+            { 
+                pregunta: "Según Szyszlo, ¿qué debe hacer el arte?", 
+                opciones: ["A. Decorar espacios", "B. Responder a modas", "C. Trascender el tiempo y conectarnos con lo sagrado"], 
+                correcta: 2, 
+                imagen: "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/05.png", 
+                mensaje: ["¡Incorrecto! Szyszlo decía: “El arte verdadero es una forma de conocimiento, una forma de religar lo humano con lo misterioso.”", "¡Incorrecto! Szyszlo decía: “El arte verdadero es una forma de conocimiento, una forma de religar lo humano con lo misterioso.”","¡Correcto! Szyszlo decía: “El arte verdadero es una forma de conocimiento, una forma de religar lo humano con lo misterioso.”"] 
+            },            
+        ];
+
+        let indicePregunta = 0;
+        let respuestasCorrectas = 0;
+
+        function mostrarPregunta() {
+            const quizContainer = document.getElementById("quiz");
+            const preguntaActual = preguntas[indicePregunta];
+            let html = `<h2>${preguntaActual.pregunta}</h2>`;
+            //html += `<img src="${preguntaActual.imagen}" alt="Imagen de la pregunta" style="display: block; margin: 0 auto; max-width:80px; height:auto; margin-bottom:10px;">`;
+            preguntaActual.opciones.forEach((opcion, index) => {
+                html += `<button class='opcion' onclick='seleccionarRespuesta(${index})'>${opcion}</button>`;
+            });
+            html += `<p id='mensaje' style='display:none'></p>`;
+            html += `<button id='siguiente' onclick='siguientePregunta()' disabled>Siguiente</button>`;
+            quizContainer.innerHTML = html;
+        }
+
+        function seleccionarRespuesta(index) {
+            const botones = document.querySelectorAll(".opcion");
+            const mensaje = document.getElementById("mensaje");
+            if (index === preguntas[indicePregunta].correcta) {
+                botones[index].style.backgroundColor = "green";
+                mensaje.textContent = preguntas[indicePregunta].mensaje[index];
+                mensaje.style.color = "green";
+                mensaje.style.display = "block";
+                respuestasCorrectas++;
+            } else {
+                botones[index].style.backgroundColor = "red";
+                mensaje.textContent = preguntas[indicePregunta].mensaje[index];
+                mensaje.style.color = "red";
+                mensaje.style.display = "block";
+            }
+            document.getElementById("siguiente").disabled = false;
+            botones.forEach(boton => boton.disabled = true);
+
+            window.scrollBy({ top: 200, behavior: "smooth" });
+        }
+
+        function siguientePregunta() {
+            indicePregunta++;
+            if (indicePregunta < preguntas.length) {
+                mostrarPregunta();
+            } else {
+                mostrarResultado();
+            }
+        }
+
+        function mostrarResultado() {
+            let mensajeFinal = "";
+            let imagen = "";
+        
+            if (respuestasCorrectas <= 1) {
+                mensajeFinal = "¡Oh, no! Aún falta que conozcas más sobre Fernando....";
+                imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-1.webp"; 
+            } else if (respuestasCorrectas <= 4) {
+                mensajeFinal = "¡Vamos que casi se logra!";
+                imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-2.webp"; 
+            } else {
+                mensajeFinal = "Sabes mucho sobre la vida de Szyszlo";
+                imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-3.webp"; 
+            }
+        
+            document.getElementById("quiz").innerHTML = `
+                <h2>Trivia finalizada</h2>
+                <p>Respuestas correctas: ${respuestasCorrectas} de ${preguntas.length}</p>
+                <!--<img src="${imagen}" alt="Mensaje final" width="100%">-->
+                <p>${mensajeFinal}</p>
+                <button onclick='reiniciarTest()' id='reset'>Reiniciar</button>
+            `;
+        }        
+
+        function reiniciarTest() {
+            indicePregunta = 0;
+            respuestasCorrectas = 0;
+            mostrarPregunta();
+        }
+
+        document.addEventListener("DOMContentLoaded", mostrarPregunta);
