@@ -216,19 +216,34 @@
                 <div class="block" id="block-2">
                     <div class="box-texto-obra">
                         <p>
-                            En la pintura de Szyszlo coinciden, entre otros, el barroco de Rembrandt, el cubismo de Pettoruti, la influencia mexicana de Tamayo, la abstracción estadounidense y las influencias precolombinas de nuestras culturas Chancay, Paracas e Inca. El cuadro tiene como eje central el choque de civilizaciones en Cajamarca de 1532.
+                            En la pintura de Szyszlo coinciden, entre otros, el barroco de Rembrandt, el cubismo de Pettoruti, la influencia mexicana de Tamayo, la abstracción y las influencias precolombinas de nuestras culturas precolombinas. El cuadro Cajamarca tiene como tema principal el choque de civilizaciones en la Cajamarca de 1532.
                         </p>
                     </div>
                 </div>
-                    <div class="block" id="block-3">            
-                       
+                <div class="block" id="block-3">            
+                    <div class="box-texto-obra right">
+                        <h5>El encuentro de mundos</h5>
+                        <p>
+                           El cuadro no solo muestra la colisión de dos entidades furiosas que parecen hacer temblar todo a su alrededor, la imagen también da cuenta de la tensión entre la imagen figurativa que apenas se distingue y la imagen abstracta compuesta por formas, textura y color.
+                        </p>
                     </div>
-                    <div class="block" id="block-4">
-                        
-                    </div>
-                    <div class="block" id="block-5">            
-                        
-                    </div>
+                </div>
+                <div class="block" id="block-4">
+                    <div class="box-texto-obra">
+                        <h5>La vibración</h5>
+                        <p>
+                            En el cuadro hay conflicto de aquellas dos fuerzas fieras que parecen impulsarse desde fuera hacia el centro del cuadro. Las líneas que definen el encuentro le otorgan a la imagen una vibración suspendida, que ubica la escena en el instante previo de la explosión.
+                        </p>
+                    </div>   
+                </div>
+                <div class="block" id="block-5">            
+                    <div class="box-texto-obra right">
+                        <h5>El rojo de la violencia</h5>
+                        <p>
+                            Si bien los colores que destacan son el fondo claro y nebuloso junto con las tonalidades oscuras de las figuras, también la imagen sugiere destellos del rojo sangriento de la violencia que se asoma, al parecer, a punto de estallar.
+                        </p>
+                    </div>   
+                </div>
                     <div class="block" id="block-6">            
                         
                     </div>
@@ -481,7 +496,55 @@
                 gsap.fromTo(
                     "#block-2",
                     { opacity: 1, y: "100%" }, // Empieza abajo, visible
-                    { opacity: 1, y: "-10%", ease: "power2.out" } // Sube sobre el bloque 1
+                    { opacity: 1, y: "-50%", ease: "power2.out" } // Sube sobre el bloque 1
+                )
+            )
+            .addTo(controller);
+
+            // Bloque 3 - sube sobre el bloque 2 de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 2, // Empieza después del bloque 2
+                duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.fromTo(
+                    "#block-3",
+                    { opacity: 1, y: "100%" }, // Empieza abajo, visible
+                    { opacity: 1, y: "-110%", ease: "power2.out" } // Sube sobre el bloque 2
+                )
+            )
+            .addTo(controller);
+
+            // Bloque 4 - sube sobre el bloque 3 de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 3, // Empieza después del bloque 3
+                duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.fromTo(
+                    "#block-4",
+                    { opacity: 1, y: "100%" }, // Empieza abajo, visible
+                    { opacity: 1, y: "-110%", ease: "power2.out" } // Sube sobre el bloque 3
+                )
+            )
+            .addTo(controller);
+
+            // Bloque 5 - sube sobre el bloque 4 de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 4, // Empieza después del bloque 4
+                duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.fromTo(
+                    "#block-5",
+                    { opacity: 1, y: "100%" }, // Empieza abajo, visible
+                    { opacity: 1, y: "-110%", ease: "power2.out" } // Sube sobre el bloque 4
                 )
             )
             .addTo(controller);

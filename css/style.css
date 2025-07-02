@@ -367,10 +367,23 @@ body, html {
             }
             .box-texto-obra{
                 background-color: #000;
-                color: #fff;
-                font: 1rem/1.7 "Noto Sans KR", sans-serif;
-                font-weight: 400;
+                box-sizing: border-box;
+                color: #fff;                
+                margin: 0 40px;
+                max-width: 400px;                
+                padding: 15px 20px;               
             }
+                .box-texto-obra p{
+                    font: 1rem / 1.7 "Noto Sans KR", sans-serif;
+                    font-weight: 400;
+                }
+                .box-texto-obra h5{
+                    font: 3rem/0.9 'kesaneregular';
+                    margin: 0 auto 10px;
+                }
+                .right{
+                    float: right;
+                }
             #block-1 {
                 background-color: #ebebe9;
                 background-image: url('../img/bg-cuadro-1.jpg?v2');
@@ -382,9 +395,22 @@ body, html {
                 z-index: 10;
             }
             #block-2 {
-                position: relative;
+                position: absolute;
                 z-index: 20;
             }
+            #block-3 {
+                position: absolute;
+                z-index: 30;
+            }
+            #block-4 {
+                position: absolute;
+                z-index: 40;
+            }
+            #block-5 {
+                position: absolute;
+                z-index: 50;
+            }
+
 
 
 .box-homenajes{
