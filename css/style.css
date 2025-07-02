@@ -120,7 +120,7 @@ body, html {
         background: url("../img/corte-1.png?v5") no-repeat center top;
         background-size: cover;
         display: block;
-        height: 50px;
+        height: 130px;
         margin: 0 auto;
         transform: translate(0,-129px);        
         width: 100%;
@@ -292,6 +292,64 @@ body, html {
                 }
                 .rotate-3 h5{
                     transform: rotate(-90deg) translate(-170px, -190px);
+                }
+.box-homenajes{
+    background: url("../img/bg-homenajes.webp") no-repeat center top;
+    background-color: #000735;
+    background-size: cover;
+    height: 100vh;
+    margin-top: -100px;
+    overflow: hidden;
+    position: relative;
+}
+    img.bg-fixed-amarillo{
+        bottom: 0;
+        max-width: 40%;        
+        position: absolute;
+        right: 0;        
+        z-index: 30;        
+    }
+    .ctn-homenajes{
+        margin: 0 auto;
+        max-width: 750px;
+        padding: 20px 0;
+        padding-top: 120px;
+        position: relative;
+        transform: translate(-60%, 0);
+        z-index: 50;
+    }
+        .ctn-homenajes h4{
+            color: #fff;
+            font: 14rem/0.9 'kesaneregular';
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        .box-muestra{
+            margin-bottom: 80px;
+        }
+            .box-muestra img{
+                display: inline-block;
+                margin: 10px;
+                max-width: 250px;
+            }
+            .box-texto-muestra{
+                display: inline-block;
+                max-width: 440px;
+                vertical-align: top;
+            }
+                .box-texto-muestra h6{
+                    color: #fff;
+                    font: 3.1rem/0.9 'kesaneregular';
+                    margin: 0 auto;
+                }
+                    .box-texto-muestra h6 span{
+                        font-size: 4.3rem;
+                    }
+                .box-texto-muestra p{
+                    color: #fff;
+                    font: 1rem/1.4 "Noto Sans KR", sans-serif;
+                    font-weight: 500;
+                    margin: 10px auto 0;                
                 }
 
 

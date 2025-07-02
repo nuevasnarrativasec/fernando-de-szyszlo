@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v2">
+    <link rel="stylesheet" href="./css/style.css?v3">
 
     <style>   
         .ads__zocalo,
@@ -184,11 +184,52 @@
         </div>
     </div>
 
-    <div class="box-obras">
-        <p>
-            texto obras
-        </p>
+    <div class="box-homenajes">
+        <img src="./img/bg-fixed-amarillo.webp" alt="" width="100%" class="bg-fixed-amarillo">
+        <div class="ctn-homenajes">
+            <h4>homenajes</h4>
+
+            <div class="box-muestra">
+                <img src="./img/bg-homenaje-1.webp" alt="" width="100%">
+                <div class="box-texto-muestra">
+                    <h6>
+                        Muestra bibliográfica <br>
+                        <span>“Szyszlo centenario”</span>
+                    </h6>
+                    <p>
+                        en el Centro Cultural Inca Garcilaso (Jr. Ucayali 391, Lima). Hasta el 28 de agosto. Horario: martes a viernes, de 10:00 a.m. a 8:00 p.m.; y sábados, domingos y feriados, de 10:00 a.m. a 6:00 p.m. Ingreso libre.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-muestra">
+                <img src="./img/bg-homenaje-2.webp" alt="" width="100%">
+                <div class="box-texto-muestra">
+                    <h6>
+                        <span>“Szyszlo. 100 años”</span>
+                    </h6>
+                    <p>
+                        en la sala 1 del MAC Lima (Av. Miguel Grau 1511, Barranco). Del 25 de junio al 3 de agosto. Horario: martes a viernes, de 10:00 a.m. a 7:00 p.m. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-muestra">
+                <img src="./img/bg-homenaje-3.webp" alt="" width="100%">
+                <div class="box-texto-muestra">
+                    <h6>
+                        <span>“Visiones del hidalgo: Szyszlo frente al Quijote”</span>
+                    </h6>
+                    <p>
+                        en la Galería Municipal Pancho Fierro (pasaje Santa Rosa 116, Lima). Del 5 de julio al 13 de agosto. Horario: lunes a domingo, de 10:00 a.m. a 7:00 p.m. Ingreso libre.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+    
 
 
     <script src="./js/jquery-3.2.1.min.js"></script>
@@ -276,7 +317,38 @@
         });
     </script>
 
-  
+    <!-- box-homenajes -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const controller = new ScrollMagic.Controller();
+
+            // Pin de la sección principal
+            new ScrollMagic.Scene({
+                triggerElement: ".box-homenajes",
+                triggerHook: 0,
+                duration: "250%",
+            })
+            .setPin(".box-homenajes")
+            .addTo(controller);
+
+            // Movimiento de los textos dentro de .box-homenajes
+            const containerHeight = document.querySelector('.ctn-homenajes').scrollHeight;
+            const viewportHeight = window.innerHeight;
+
+            new ScrollMagic.Scene({
+                triggerElement: ".box-homenajes",
+                triggerHook: 0,
+                duration: containerHeight - viewportHeight // Duración necesaria para que suba completamente
+            })
+            .setTween(
+                gsap.fromTo(".ctn-homenajes", 
+                    { y: viewportHeight }, // comienza abajo
+                    { y: - (containerHeight - viewportHeight), ease: "none" } // va hacia arriba
+                )
+            )
+            .addTo(controller);   
+        });
+    </script>
     
 </body>
 </html>
