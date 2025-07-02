@@ -302,6 +302,9 @@ body, html {
     background-size: 100%;
     padding-bottom: 180px;
 }
+.box-obras{
+    padding-bottom: 0;
+}
 .medio-obras{
     padding-bottom: 0;
 }
@@ -445,12 +448,35 @@ body, html {
                 position: absolute;
                 z-index: 50;
             }
-
+.box-entrevista{
+    background-color: #25272C;   
+    padding: 40px 0 120px;
+}
+    .ctn-box-entrevista{
+        margin: 0 auto;
+        max-width: 700px;
+        padding: 20px 0;
+    }
+        .ctn-box-entrevista h4{
+            color: #fff;
+            font: 6rem/0.9 'kesaneregular';
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        .box-video{
+            margin-bottom: 40px;
+        }
+            .box-video h4{
+                font-size: 3rem;
+            }
+            .box-iframe{
+                width: 100%;
+            }
 
 
 .box-homenajes{
     background: url("../img/bg-homenajes.webp") no-repeat center top;
-    background-color: #000735;
+    background-color: #25272c;
     background-size: cover;
     height: 100vh;
     margin-top: -100px;

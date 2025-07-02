@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v3">
+    <link rel="stylesheet" href="./css/style.css?v4">
 
     <style>   
         .ads__zocalo,
@@ -303,6 +303,39 @@
         
     </div>
 
+    <div class="box-entrevista">
+        <div class="ctn-box-entrevista">
+            <h4>entrevista a <br> fernando de Szyszlo</h4>
+
+            <div class="box-video">
+                <h4>parte 1</h4>
+                <div class="box-iframe">
+                    <iframe class="youtube-iframe"
+                        width="100%"
+                        height="415"
+                        src="https://www.youtube.com/embed/BPoFtpLqsT0?enablejsapi=1"
+                        frameborder="0"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="box-video">
+                <h4>parte 2</h4>
+                <div class="box-iframe">
+                    <iframe class="youtube-iframe"
+                        width="100%"
+                        height="415"
+                        src="https://www.youtube.com/embed/BPoFtpLqsT0?enablejsapi=1"
+                        frameborder="0"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="box-homenajes">
         <img src="./img/bg-fixed-amarillo.webp" alt="" width="100%" class="bg-fixed-amarillo">
         <div class="ctn-homenajes">
@@ -390,6 +423,7 @@
     <script src="./js/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="./js/animation.gsap.js"></script>
+    
 
     <!-- compartir -->
     <script>
@@ -677,6 +711,51 @@
             .addTo(controller);
         });
     </script>
+
+    <!-- IFrame de YouTube -->
+    <script>
+        const iframes = document.querySelectorAll('.youtube-iframe');
+        let lastActive = null;
+
+        // Pausa todos menos el actual (recargando el src)
+        function pauseOthers(current) {
+            iframes.forEach(iframe => {
+            if (iframe !== current) {
+                const src = iframe.src;
+                iframe.src = ''; // pausa
+                iframe.src = src; // recarga
+            }
+            });
+        }
+
+        // Observa foco en los iframes
+        iframes.forEach(iframe => {
+            iframe.addEventListener('mouseenter', () => {
+            pauseOthers(iframe);
+            lastActive = iframe;
+            });
+        });
+
+        // Observa si .box-entrevista sale del viewport
+        function checkOutOfViewportAndPause() {
+            const container = document.querySelector('.box-entrevista');
+            const rect = container.getBoundingClientRect();
+            const visible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (!visible && lastActive) {
+            const src = lastActive.src;
+            lastActive.src = '';
+            lastActive.src = src;
+            lastActive = null;
+            }
+        }
+
+        window.addEventListener('scroll', checkOutOfViewportAndPause);
+        window.addEventListener('resize', checkOutOfViewportAndPause);
+    </script>
+
+
+
     
 </body>
 </html>
