@@ -206,6 +206,42 @@
                     Colección Luis Miró Quesada Garland, Lima
                 </p>
             </div>   
+            
+        </div>
+        <div class="box-parallax-obras">
+            <div class="section" id="section-obras">
+                <div class="block" id="block-1">
+                        
+                </div>
+                <div class="block" id="block-2">
+                    <div class="box-texto-obra">
+                        <p>
+                            En la pintura de Szyszlo coinciden, entre otros, el barroco de Rembrandt, el cubismo de Pettoruti, la influencia mexicana de Tamayo, la abstracción estadounidense y las influencias precolombinas de nuestras culturas Chancay, Paracas e Inca. El cuadro tiene como eje central el choque de civilizaciones en Cajamarca de 1532.
+                        </p>
+                    </div>
+                </div>
+                    <div class="block" id="block-3">            
+                       
+                    </div>
+                    <div class="block" id="block-4">
+                        
+                    </div>
+                    <div class="block" id="block-5">            
+                        
+                    </div>
+                    <div class="block" id="block-6">            
+                        
+                    </div>
+                    <div class="block" id="block-7">            
+                        
+                    </div>
+                    <div class="block" id="block-8">            
+                        
+                    </div>
+                    <div class="block" id="block-9">            
+                        
+                    </div>
+            </div>
         </div>
     </div>
 
@@ -406,6 +442,49 @@
                 )
             )
             .addTo(controller);   
+        });
+    </script>
+
+    <!-- parallax obras -->
+    <script>       
+        document.addEventListener('DOMContentLoaded', () => {
+            const controller = new ScrollMagic.Controller();
+
+            // Pin de la sección principal
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                duration: "900%",
+            })
+            .setPin("#section-obras")
+            .addTo(controller);
+
+            // Bloque 1 - Fade-in
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-1", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
+            // Bloque 2 - sube sobre el bloque 1 de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight, // Empieza después del bloque 1
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.fromTo(
+                    "#block-2",
+                    { opacity: 1, y: "100%" }, // Empieza abajo, visible
+                    { opacity: 1, y: "-10%", ease: "power2.out" } // Sube sobre el bloque 1
+                )
+            )
+            .addTo(controller);
         });
     </script>
     

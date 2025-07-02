@@ -354,6 +354,37 @@ body, html {
                 font: 1rem/1.7 "Noto Sans KR", sans-serif;
                 font-weight: 700;
             }
+    .box-parallax-obras{
+        position: relative;
+    }
+        #section-obras {
+            overflow: hidden;
+            position: relative;                
+        }
+            .box-parallax-obras .block{
+                height: 100vh;
+                width: 100%;
+            }
+            .box-texto-obra{
+                background-color: #000;
+                color: #fff;
+                font: 1rem/1.7 "Noto Sans KR", sans-serif;
+                font-weight: 400;
+            }
+            #block-1 {
+                background-color: #ebebe9;
+                background-image: url('../img/bg-cuadro-1.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 1; 
+                position: absolute;               
+                z-index: 10;
+            }
+            #block-2 {
+                position: relative;
+                z-index: 20;
+            }
 
 
 .box-homenajes{
