@@ -116,8 +116,11 @@ body, html {
     background-color: #640c06;
     position: relative;
 }
-    .box-intro .corte-1{
+    .corte-1{
+        background: url("../img/corte-1.png?v5") no-repeat center top;
+        background-size: cover;
         display: block;
+        height: 50px;
         margin: 0 auto;
         transform: translate(0,-129px);        
         width: 100%;
@@ -296,5 +299,55 @@ body, html {
 
 @media (max-width: 640px) {
 
+
+    .corte-1 {
+        height: 80px;
+        transform: translate(0, -80px);
+    }
+    .ctn-box-intro{
+        margin-top: -130px;
+    }
+    .box-autor {
+        padding: 0 20px;
+        text-align: center;
+    }
+        .box-autor h5{
+            margin: 0 auto;
+        }
+    .ctn-box-intro p, .ctn-box-legado p{
+        padding: 0 20px;
+    }
+    h3.subtitulo{
+        font-size: 5rem;
+    }
+    img.bg-fixed {
+        max-width: 100%;
+        right: -60%;
+    }
+    .box-hitos .ctn-hitos{
+        box-sizing: border-box;
+        max-width: 100%;
+        transform: translate(0%, 0);
+    }
+    .ctn-hitos h4{
+        font-size: 11rem;
+    }
+    .ctn-hitos p:nth-child(2){
+        padding: 0 20px;
+    }
+    .box-fecha{
+        padding: 0 20px;
+    }
+    .box-fecha h5{
+        transform: none;
+    }
+    .box-fecha .box-texto-fecha p{
+       padding: 0;
+    }
+    .derecha,
+    .derecha-2,
+    .derecha-3{
+        transform: none;
+    }
 
 }
