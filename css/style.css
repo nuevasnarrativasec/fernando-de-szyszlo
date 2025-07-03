@@ -112,6 +112,12 @@ body, html {
         top: 0;        
         width: 100%;
     }
+    #video-desktop{
+        display: block;
+    }
+    #video-movil{
+        display: none;
+    }
 .box-intro{
     background-color: #640c06;
     position: relative;
@@ -379,9 +385,9 @@ body, html {
                 width: 100%;
             }
             .box-texto-obra{
-                background-color: #000;
+                background-color: #fff;
                 box-sizing: border-box;
-                color: #fff;                
+                color: #000;         
                 margin: 0 40px;
                 max-width: 400px;                
                 padding: 15px 20px;               
@@ -398,8 +404,8 @@ body, html {
                     float: right;
                 }
             #block-1 {
-                background-color: #ebebe9;
-                background-image: url('../img/bg-cuadro-1.jpg?v2');
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-1-0.jpg?v2');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -411,22 +417,52 @@ body, html {
                 position: absolute;
                 z-index: 20;
             }
+            #block-3-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-1-1.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 25;
+            }
             #block-3 {
                 position: absolute;
                 z-index: 30;
-            }
+            }   
+            #block-4-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-1-2.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 35;
+            }             
             #block-4 {
                 position: absolute;
                 z-index: 40;
             }
+            #block-5-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-1-3.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 45;
+            }   
             #block-5 {
                 position: absolute;
                 z-index: 50;
             }
 
             #block-7 {
-                background-color: #ebebe9;
-                background-image: url('../img/bg-cuadro-2.jpg?v2');
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-2-0.jpg?v2');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -434,14 +470,44 @@ body, html {
                 position: absolute;               
                 z-index: 10;
             }
+            #block-8-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-2-1.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 15;
+            }   
             #block-8 {
                 position: absolute;
                 z-index: 20;
             }
+            #block-9-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-2-2.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 25;
+            }   
             #block-9 {
                 position: absolute;
                 z-index: 30;
             }
+            #block-10-bg{
+                background-color: #000;
+                background-image: url('../img/bg-cuadro-2-3.jpg?v2');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                opacity: 0; 
+                position: absolute; 
+                z-index: 36;
+            }  
             #block-10 {
                 position: absolute;
                 z-index: 40;
@@ -813,7 +879,12 @@ body, html {
 
 @media (max-width: 640px) {
 
-
+    #video-desktop{
+        display: none;
+    }
+    #video-movil{
+        display: block;
+    }
     .corte-1 {
         height: 80px;
         transform: translate(0, -80px);

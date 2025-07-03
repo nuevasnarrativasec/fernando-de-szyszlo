@@ -67,7 +67,8 @@
     </div>
 
     <div class="box-portada">
-        <video src="./video/portada-4.mp4?v2" playsinline autoplay muted></video>
+        <video id="video-desktop" src="./video/portada-desktop.mp4?v2" playsinline autoplay muted></video>
+        <video id="video-movil" src="./video/portada-movil.mp4?v2" playsinline autoplay muted></video>
     </div>
 
     <div class="box-intro">
@@ -77,7 +78,7 @@
                 El siglo de Szyszlo
             </h3>
             <div class="box-autor">
-                <img src="./img/bg-autor.png" alt="" width="100%">
+                <!--<img src="./img/bg-autor.png" alt="" width="100%">-->
                 <h5>
                     Por Jorge Paredes
                     <span>Periodista de El Dominical - El Comercio</span>
@@ -219,13 +220,19 @@
                         </p>
                     </div>
                 </div>
-                <div class="block" id="block-3">            
-                    <div class="box-texto-obra right">
+                <div class="block" id="block-3-bg">
+                        
+                </div>                
+                <div class="block" id="block-3">           
+                    <div class="box-texto-obra right" id="bloque-texto-block-3">
                         <h5>El encuentro de mundos</h5>
                         <p>
                            El cuadro no solo muestra la colisión de dos entidades furiosas que parecen hacer temblar todo a su alrededor, la imagen también da cuenta de la tensión entre la imagen figurativa que apenas se distingue y la imagen abstracta compuesta por formas, textura y color.
                         </p>
                     </div>
+                </div>
+                <div class="block" id="block-4-bg">
+                        
                 </div>
                 <div class="block" id="block-4">
                     <div class="box-texto-obra">
@@ -234,6 +241,9 @@
                             En el cuadro hay conflicto de aquellas dos fuerzas fieras que parecen impulsarse desde fuera hacia el centro del cuadro. Las líneas que definen el encuentro le otorgan a la imagen una vibración suspendida, que ubica la escena en el instante previo de la explosión.
                         </p>
                     </div>   
+                </div>
+                <div class="block" id="block-5-bg">
+                        
                 </div>
                 <div class="block" id="block-5">            
                     <div class="box-texto-obra right">
@@ -268,6 +278,9 @@
                 <div class="block" id="block-7">
                         
                 </div>
+                <div class="block" id="block-8-bg">
+                        
+                </div>
                 <div class="block" id="block-8">
                     <div class="box-texto-obra">
                         <h5>Los espacios</h5>
@@ -276,6 +289,9 @@
                         </p>
                     </div>
                 </div>
+                <div class="block" id="block-9-bg">
+                        
+                </div>
                 <div class="block" id="block-9">            
                     <div class="box-texto-obra right">
                         <h5>La cabeza del Inca</h5>
@@ -283,6 +299,9 @@
                            En el centro de la pintura observamos una geometría telúrica con texturas que parecen cabellos. El gran bloque se desplaza hacia la izquierda del cuadro con firmeza. Según el mito del Inkarri la cabeza degollada de Túpac Amaru I volverá a unirse con su cuerpo para recuperar lo suyo.
                         </p>
                     </div>
+                </div>
+                <div class="block" id="block-10-bg">
+                        
                 </div>
                 <div class="block" id="block-10">
                     <div class="box-texto-obra">
@@ -386,7 +405,7 @@
         <div class="ctn-box-texto-homenaje">
             <h3 class="subtitulo" style="font-size: 5rem;">El legado que revive en tres exposiciones memorables</h3>  
             <div class="box-autor">
-                <img src="./img/bg-autor.png" alt="" width="100%">
+                <!--<img src="./img/bg-autor.png" alt="" width="100%">-->
                 <h5>
                     Por Jorge Paredes
                     <span>Periodista de El Dominical - El Comercio</span>
@@ -661,7 +680,7 @@
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras",
                 triggerHook: 0,
-                duration: "500%",
+                duration: "800%",
             })
             .setPin("#section-obras")
             .addTo(controller);
@@ -693,27 +712,51 @@
             )
             .addTo(controller);
 
-            // Bloque 3 - sube sobre el bloque 2 de abajo hacia arriba a velocidad media
+            // Bloque 3 bg - Fade-in
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras",
                 triggerHook: 0,
-                offset: window.innerHeight * 2, // Empieza después del bloque 2
+                offset: window.innerHeight * 2, // Empieza después del bloque 3
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-3-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
+            // Bloque 3 - sube sobre el bloque 3-bg de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 3, // Empieza después del bloque 3
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
                 gsap.fromTo(
                     "#block-3",
                     { opacity: 1, y: "100%" }, // Empieza abajo, visible
-                    { opacity: 1, y: "-110%", ease: "power2.out" } // Sube sobre el bloque 2
+                    { opacity: 1, y: "-110%", ease: "power2.out" } // Sube sobre el bloque 3
                 )
             )
-            .addTo(controller);
-
-            // Bloque 4 - sube sobre el bloque 3 de abajo hacia arriba a velocidad media
+            .addTo(controller);   
+            
+            // Bloque 4 bg - Fade-in
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras",
                 triggerHook: 0,
-                offset: window.innerHeight * 3, // Empieza después del bloque 3
+                offset: window.innerHeight * 4, // Empieza después del bloque 3
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-4-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
+            // Bloque 4 - sube sobre el bloque 4-bg de abajo hacia arriba a velocidad media
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 5, // Empieza después del bloque 4-bg
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
@@ -725,11 +768,23 @@
             )
             .addTo(controller);
 
+            // Bloque 5 bg - Fade-in
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras",
+                triggerHook: 0,
+                offset: window.innerHeight * 6, // Empieza después del bloque 4
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-5-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
             // Bloque 5 - sube sobre el bloque 4 de abajo hacia arriba a velocidad media
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras",
                 triggerHook: 0,
-                offset: window.innerHeight * 4, // Empieza después del bloque 4
+                offset: window.innerHeight * 7, // Empieza después del bloque 5-bg
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
@@ -745,7 +800,7 @@
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras-2",
                 triggerHook: 0,
-                duration: "600%",
+                duration: "900%",
             })
             .setPin("#section-obras-2")
             .addTo(controller);
@@ -761,11 +816,23 @@
             )
             .addTo(controller);
 
+            // Bloque 8 bg - Fade-in
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras-2",
+                triggerHook: 0,
+                offset: window.innerHeight * 2, // Empieza después del bloque 3
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-8-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
             // Bloque 8 - sube sobre el bloque 7 de abajo hacia arriba a velocidad media
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras-2",
                 triggerHook: 0,
-                offset: window.innerHeight * 2, // Empieza después del bloque 7
+                offset: window.innerHeight * 3, // Empieza después del bloque 7
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
@@ -777,11 +844,23 @@
             )
             .addTo(controller);
 
+            // Bloque 9 bg - Fade-in
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras-2",
+                triggerHook: 0,
+                offset: window.innerHeight * 4, // Empieza después del bloque 8
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-9-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
             // Bloque 9 - sube sobre el bloque 8 de abajo hacia arriba a velocidad media
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras-2",
                 triggerHook: 0,
-                offset: window.innerHeight * 3, // Empieza después del bloque 8
+                offset: window.innerHeight * 5, // Empieza después del bloque 9-bg
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
@@ -793,11 +872,23 @@
             )
             .addTo(controller);
 
+            // Bloque 10 bg - Fade-in
+            new ScrollMagic.Scene({
+                triggerElement: "#section-obras-2",
+                triggerHook: 0,
+                offset: window.innerHeight * 6, // Empieza después del bloque 9
+                duration: window.innerHeight * 1.5, // Más duración para velocidad media y lectura cómoda
+            })
+            .setTween(
+                gsap.to("#block-10-bg", { opacity: 1, duration: 1 })
+            )
+            .addTo(controller);
+
             // Bloque 10 - sube sobre el bloque 9 de abajo hacia arriba a velocidad media
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras-2",
                 triggerHook: 0,
-                offset: window.innerHeight * 4, // Empieza después del bloque 9
+                offset: window.innerHeight * 7, // Empieza después del bloque 10-bg
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
@@ -813,7 +904,7 @@
             new ScrollMagic.Scene({
                 triggerElement: "#section-obras-2",
                 triggerHook: 0,
-                offset: window.innerHeight * 5, // Empieza después del bloque 10
+                offset: window.innerHeight * 8, // Empieza después del bloque 10
                 duration: window.innerHeight * 2.5, // Más duración para velocidad media y lectura cómoda
             })
             .setTween(
