@@ -87,13 +87,13 @@ const preguntas = [
             let imagen = "";
         
             if (respuestasCorrectas <= 1) {
-                mensajeFinal = "¡Oh, no! Aún falta que conozcas más sobre Fernando....";
+                mensajeFinal = "¡Uy! Parece que aún no conoces a Fernando de Szyszlo. Pero no te preocupes, te animamos a volver a revisar este especial para descubrir su vida y obra.";
                 imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-1.webp"; 
             } else if (respuestasCorrectas <= 4) {
-                mensajeFinal = "¡Vamos que casi se logra!";
+                mensajeFinal = "¡Vas por buen camino! Conoces algunos aspectos de Szyszlo, pero todavía hay mucho por explorar. Sigue descubriendo su legado.";
                 imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-2.webp"; 
             } else {
-                mensajeFinal = "Sabes mucho sobre la vida de Szyszlo";
+                mensajeFinal = "¡Impresionante! Eres un verdadero conocedor de Szyszlo. Tu admiración y conocimiento sobre el maestro del arte abstracto peruano están a otro nivel.";
                 imagen = "https://nuevasnarrativasec.github.io/trivia-impuesto-a-la-renta/img/resultado-3.webp"; 
             }
         
@@ -112,4 +112,16 @@ const preguntas = [
             mostrarPregunta();
         }
 
-        document.addEventListener("DOMContentLoaded", mostrarPregunta);
+        //document.addEventListener("DOMContentLoaded", mostrarPregunta);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const btnComenzar = document.getElementById("btn-comenzar");
+            const pantallaInicial = document.getElementById("pantalla-inicial");
+            const quiz = document.getElementById("quiz");
+
+            btnComenzar.addEventListener("click", function () {
+                pantallaInicial.style.display = "none";
+                quiz.style.display = "block";
+                mostrarPregunta();
+            });
+        });
