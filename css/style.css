@@ -312,6 +312,8 @@ body, html {
 }
 .box-obras{
     padding-bottom: 0;
+    position: relative;
+    z-index: 50;
 }
 .medio-obras{
     padding-bottom: 0;
@@ -645,9 +647,11 @@ body, html {
             z-index: 30;        
         }
         .ctn-box-hablan-texto{
+            float: right;
             max-width: 650px;
+            padding-right: 40px;
             position: relative;
-            transform: translate(120%, 0);
+            /*transform: translate(120%, 0);*/
             z-index: 50;
         }
             .ctn-box-hablan-texto h5{
@@ -674,7 +678,7 @@ body, html {
                 color: #000;
             }
                 .ctn-box-hablan-texto .margin-bottom{
-                    margin-bottom: 90px;
+                    margin-bottom: 150px;
                 }
             .box-frase{
                 margin: 40px auto 80px;
@@ -875,7 +879,29 @@ body, html {
                         display: block;
                         font-weight: 700;
                     }
+.box-homenajes .ctn-homenajes{
+       float: left;
+        transform: translateX(0);
+}
+@media (max-height: 732px) {
 
+    .box-obras{
+        padding-top: 100px;
+    }
+    .box-homenajes .ctn-homenajes{
+       float: left;
+       transform: translateX(0);
+    }
+
+}
+
+
+@media (max-width: 1440px) {
+
+    .box-homenajes .ctn-homenajes{
+       float: left;
+    }
+}
 
 @media (max-width: 640px) {
 
@@ -1038,7 +1064,6 @@ body, html {
     }
         .box-footer h4{
             font-size: 3rem;
-        }
-    
+        }    
 
 }
