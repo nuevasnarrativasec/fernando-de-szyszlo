@@ -751,6 +751,64 @@ body, html {
             max-width: 30%;   
             text-align: center !important;
         }
+.box-footer{
+    background-color: #241b4b;
+    background-image: url("../img/bg-footer.webp?v3");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 30px 0;
+    position: relative;
+    z-index: 40;
+}
+    .corte-7{
+        background: url("../img/corte-7.png?v3") no-repeat center top;
+        background-size: cover;
+        display: block;
+        height: 100px;
+        margin: 0 auto;
+        transform: translate(0,-129px);
+        width: 100%;
+    }
+    .box-footer h4{
+        color: #fff;
+        font: 5rem/1 'kesaneregular';
+        margin: 0 auto;
+        max-width: 730px;
+        text-align: center;
+    }
+    img.firma{
+        display: block;
+        margin: 20px auto;
+        max-width: 150px;
+    }
+    .ctn-footer{
+        margin-top: 150px;
+        text-align: center;
+    }
+        .ctn-footer img{
+            display: block;
+            margin: 0 auto;
+            max-width: 150px;
+        }
+        .ctn-footer ul{
+            list-style: none;
+            margin-top: 40px;
+            padding: 0;
+            text-align: center;
+        }
+            .ctn-footer ul li{
+
+            }
+                .ctn-footer ul li{
+                    color: #fff;
+                    font: 1rem/1.4 "Noto Sans KR", sans-serif;
+                    margin-bottom: 30px;
+                }
+                    .ctn-footer ul li span{
+                        display: block;
+                        font-weight: 700;
+                    }
 
 
 @media (max-width: 640px) {
@@ -772,6 +830,9 @@ body, html {
         }
     .ctn-box-intro p, .ctn-box-legado p{
         padding: 0 20px;
+    }
+    h4.frase{
+        font-size: 4rem;
     }
     h3.subtitulo{
         font-size: 5rem;
@@ -805,5 +866,108 @@ body, html {
     .derecha-3{
         transform: none;
     }
+    .box-obras,
+    .medio-obras{
+        background: url("../img/bg-obras-movil.jpg") no-repeat center top;
+        background-color: #231e24;
+        background-size: contain;        
+    }
+    .medio-obras{
+        background-size: cover;
+    }
+    .ctn-box-obras h4{
+        font-size: 10rem;
+    }
+    .box-titulo-obra{
+        margin: 60px 20px;
+        max-width: 90%;
+    }
+    .box-texto-obra h5{
+        font-size: 2.5rem;
+    }
+    .ctn-box-entrevista h4{
+        font-size: 4rem;
+    }
+    .box-iframe {
+        padding: 0 20px;
+        width: 89%;        
+    }
+    .youtube-iframe{
+        height: 215px;
+    }
+    .box-homenajes .ctn-homenajes{
+        transform: none;
+    }
+    .ctn-homenajes h4{
+        font-size: 7rem;
+    }
+    img.bg-fixed-amarillo{
+        max-width: 70%;
+        right: -25%;
+    }
+    .box-muestra{
+        padding: 0 20px;
+        text-align: center;
+    }
+    .box-texto-muestra p{
+        line-height: 1.6;
+        text-align: left;
+    }
+    .box-texto-muestra h6 span{
+        font-size: 3.5rem;
+    }
+    .box-texto-homenaje{
+        padding-bottom: 80px;
+        position: relative;
+        z-index: 40;
+    }
+    .ctn-box-texto-homenaje p{
+        padding: 0 20px;
+    }
+    img.bg-fixed-rojo{
+        display: none;
+    }
+    .box-hablan{
+        height: 100vh;
+        z-index: 40;
+    }
+    .ctn-box-hablan{
+        padding: 0 20px;
+    }
+    .ctn-box-hablan-texto{
+        transform: none;
+    }
+    .autor-left{
+        padding: 0;
+        text-align: left;
+    }
+    .box-frase h4{
+        font: 2.8rem / 1.1 'kesaneregular';
+    }
+    .box-trivia{
+        padding-bottom: 50px;
+    }
+    #trivia-container{
+        margin-top: -120px;
+    }
+        #trivia-container h5{
+            font-size: 8rem;
+        }
+        #quiz h2{
+            font-size: 2.5rem;
+        }
+        .bg-fixed-azul{
+            display: none;
+        }
+        #quiz #reset{
+            max-width: 40%;
+        }
+    .box-footer{
+        background-size: 300%;
+    }
+        .box-footer h4{
+            font-size: 3rem;
+        }
+    
 
 }

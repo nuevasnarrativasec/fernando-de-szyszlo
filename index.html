@@ -423,7 +423,7 @@
             <div class="ctn-box-hablan-texto">
                 <h5>Hablan sobre el</h5>
                 <h6>la juventud de Szyszlo</h6>
-                <div class="box-autor">
+                <div class="box-autor autor-left">
                     <h5>
                         Por Alonso Cueto
                         <span>Escritor y periodista</span>
@@ -487,6 +487,46 @@
         <div id="trivia-container">
             <h5>trivia</h5>
             <div id="quiz"></div>
+        </div>
+    </div>
+
+    <div class="box-footer">
+        <div class="corte-7"></div>
+        <h4>
+            “EL ARTE VERDADERO ES UNA FORMA DE CONOCIMIENTO, UNA FORMA DE RELIGAR LO HUMANO CON LO MISTERIOSO.”
+        </h4>
+        <img src="./img/firma.png" alt="" width="100%" class="firma">
+
+        <div class="ctn-footer">
+            <img src="./img/logo-comercio.png" alt="" width="100%">
+            <ul>
+                <li>
+                    <span>Textos:</span>
+                    Jorge Paredes <br>
+                    Alonso Cueto <br>
+                    Miguel Sánchez Flores
+                </li>
+                <li>
+                    <span>Diseño:</span>
+                    Marcelo Hidalgo
+                </li>
+                <li>
+                    <span>Ilustraciones:</span>
+                    Kiomy Kanashiro
+                </li>
+                <li>
+                    <span>Programación:</span>
+                    Armando Scargglioni C.
+                </li>
+                <li>
+                    <span>Edición visual:</span>
+                    Angela Peña
+                </li>
+                <li>
+                    <span>Producción general:</span>
+                    Gisella Salmón
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -648,7 +688,7 @@
                 gsap.fromTo(
                     "#block-2",
                     { opacity: 1, y: "100%" }, // Empieza abajo, visible
-                    { opacity: 1, y: "-50%", ease: "power2.out" } // Sube sobre el bloque 1
+                    { opacity: 1, y: "-80%", ease: "power2.out" } // Sube sobre el bloque 1
                 )
             )
             .addTo(controller);
@@ -859,14 +899,15 @@
             triggerHook: 0,
             duration: scrollDuration,
         })
-            .setTween(
+        
+        .setTween(
             gsap.fromTo(
                 container,
                 { y: 0 }, // ya visible
-                { y: "-80%", ease: "none" } // se va desplazando hacia arriba
+                { y: "-90%", ease: "none" } // se va desplazando hacia arriba
             )
-            )
-            .addTo(controller);
+        )
+        .addTo(controller);
         });
 
 
