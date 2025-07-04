@@ -70,7 +70,7 @@ const preguntas = [
             document.getElementById("siguiente").disabled = false;
             botones.forEach(boton => boton.disabled = true);
 
-            window.scrollBy({ top: 200, behavior: "smooth" });
+            window.scrollBy({ top: 0, behavior: "smooth" });
         }
 
         function siguientePregunta() {
