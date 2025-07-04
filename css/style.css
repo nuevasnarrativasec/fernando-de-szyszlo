@@ -808,6 +808,8 @@ body, html {
     }
     #trivia-container{
         padding: 0 0 100px;
+        position: relative;
+        z-index: 50;
     }
     #quiz {
         margin: auto;
