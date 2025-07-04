@@ -45,7 +45,7 @@ const preguntas = [
             let html = `<h2>${preguntaActual.pregunta}</h2>`;
             html += `<img src="${preguntaActual.imagen}" alt="Imagen de la pregunta" style="display: block; margin: 0 auto; max-width:80px; height:auto; margin-bottom:10px;">`;
             preguntaActual.opciones.forEach((opcion, index) => {
-                html += `<button class='opcion' onclick='seleccionarRespuesta(${index})'>${opcion}</button>`;
+                html += `<button type="button" class='opcion' onclick='seleccionarRespuesta(${index})'>${opcion}</button>`;
             });
             html += `<p id='mensaje' style='display:none'></p>`;
             html += `<button id='siguiente' onclick='siguientePregunta()' disabled>Siguiente</button>`;
