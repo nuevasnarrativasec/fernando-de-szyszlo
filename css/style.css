@@ -1002,10 +1002,10 @@ body, html {
     }
     .corte-1 {
         height: 80px;
-        transform: translate(0, -80px);
+        transform: translate(0, -40px);
     }
     .ctn-box-intro{
-        margin-top: -130px;
+        margin-top: -75px;
     }
     .box-autor {
         padding: 0 20px;

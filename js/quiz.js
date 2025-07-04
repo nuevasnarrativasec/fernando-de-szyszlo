@@ -18,7 +18,7 @@ const preguntas = [
                 opciones: ["A. Es una copia de textiles antiguos.", "B. Es un experimento geométrico sin contenido.", "C. Es una abstracción inspirada en los rituales y simbolismos Paracas."], 
                 correcta: 2, 
                 imagen: "https://nuevasnarrativasec.github.io/fernando-de-szyszlo/img/numero-3.png", 
-                mensaje: ["¡Incorrecto! simply dummy text of the printing and typesetting industry.", "¡Incorrecto! simply dummy text of the printing and typesetting industry.", "¡Correcto! simply dummy text of the printing and typesetting industry."] 
+                mensaje: ["¡Casi! Pero no es correcto. La obra no busca copiar literalmente ni hacer un ejercicio vacío. Es una abstracción profunda, inspirada en los rituales, colores y simbolismos de la antigua cultura Paracas.", "¡Casi! Pero no es correcto. La obra no busca copiar literalmente ni hacer un ejercicio vacío. Es una abstracción profunda, inspirada en los rituales, colores y simbolismos de la antigua cultura Paracas.", "¡Correcto! La obra no busca copiar literalmente ni hacer un ejercicio vacío. Es una abstracción profunda, inspirada en los rituales, colores y simbolismos de la antigua cultura Paracas."] 
             },
             { 
                 pregunta: "¿Qué lugar puedes visitar hoy en Lima para ver su obra?", 
